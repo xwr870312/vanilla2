@@ -1967,14 +1967,14 @@ if (typeof String.prototype.trim !== 'function') {
 
 jQuery(window).load(function() {
     $(".Activity-BadgeAward img,#RecentActivity .BadgeAward img").each(function() { 
-            var src = $(this).attr("src").replace('http://localhost/vanilla/index.php?p=','/vanilla');
+            var src = $(this).attr("src").replace('/vanilla_new/index.php?p=','/vanilla');
             $(this).attr("src", src);
         })
 });
 
 jQuery(window).load(function() {
     $("#Provider_GooglePlus .IconWrap img").each(function() { 
-            var src = $(this).attr("src").replace('/vanilla/vanilla','/vanilla');
+            var src = $(this).attr("src").replace('/vanilla_new/vanilla_new','/vanilla');
             $(this).attr("src", src);
         })
 });

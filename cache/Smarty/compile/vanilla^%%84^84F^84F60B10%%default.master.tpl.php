@@ -1,10 +1,17 @@
+<?php /* Smarty version 2.6.25, created on 2016-04-27 08:42:13
+         compiled from /Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'asset', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 4, false),array('function', 'searchbox', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 18, false),array('function', 'link', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 25, false),array('function', 'logo', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 25, false),array('function', 'module', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 96, false),array('function', 'vanillaurl', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 104, false),array('function', 'event', '/Applications/XAMPP/xamppfiles/htdocs/vanilla_new/themes/bittersweet/views/default.master.tpl', 110, false),)), $this); ?>
 <!DOCTYPE html>
 <html>
 <head>
-    {asset name="Head"}
+    <?php echo smarty_function_asset(array('name' => 'Head'), $this);?>
+
 
 </head>
-<body id="{$BodyID}" class="{$BodyClass}">
+<body id="<?php echo $this->_tpl_vars['BodyID']; ?>
+" class="<?php echo $this->_tpl_vars['BodyClass']; ?>
+">
 <div id="Frame">
     <div class="Top">
         <div class="Row">
@@ -15,14 +22,17 @@
 
                 <a href="#">Sign up</a>
                 <a href="#">Sign in</a>
-                <div class="SiteSearch">{searchbox}</div>
+                <div class="SiteSearch"><?php echo smarty_function_searchbox(array(), $this);?>
+</div>
               
             </div>
         </div>
     </div>
     <div class="Banner">
         <div class="Row">
-            <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
+            <strong class="SiteTitle"><a href="<?php echo smarty_function_link(array('path' => "/"), $this);?>
+"><?php echo smarty_function_logo(array(), $this);?>
+</a></strong>
             <!--
             We've placed this optional advertising space below. Just comment out the line and replace "Advertising Space" with your 728x90 ad banner.
             -->
@@ -32,7 +42,8 @@
     <div id="Head">
         <div class="Row">
             <ul class="SiteMenu">
-                <li><a href="{link path="/"}">HOME</a></li>
+                <li><a href="<?php echo smarty_function_link(array('path' => "/"), $this);?>
+">HOME</a></li>
                 <li><a>ABOUT+</a>
                     <ul class="sub-menu">
                     <li><a href="http://localhost/vanilla_new/index.php?p=/page/new-page-test">GETTING STARTED</a></li>
@@ -63,7 +74,8 @@
                     <li><a>BLOGS</a></li>
                     <li><a>GROUPS</a></li>
                     <li><a>EVENTS</a></li>
-                    <li><a href="{link path="/members"}">MEMBERS</a></li>
+                    <li><a href="<?php echo smarty_function_link(array('path' => "/members"), $this);?>
+">MEMBERS</a></li>
                     </ul></li>
                 <li><a>UNI LIFE</a></li>
                 <li><a>BUY/SELL+</a>
@@ -93,21 +105,27 @@
 
         <div class="Row">
             <div class="Column PanelColumn" id="Panel">
-                {module name="MeModule"}
-                {asset name="Panel"}
+                <?php echo smarty_function_module(array('name' => 'MeModule'), $this);?>
+
+                <?php echo smarty_function_asset(array('name' => 'Panel'), $this);?>
+
             </div>
-            <div class="Column ContentColumn" id="Content"><div id="slider_div" class="Row"></div>{asset name="Content"}</div>
+            <div class="Column ContentColumn" id="Content"><div id="slider_div" class="Row"></div><?php echo smarty_function_asset(array('name' => 'Content'), $this);?>
+</div>
         </div>
     </div>
     <div id="Foot">
         <div class="Row">
-            <a href="{vanillaurl}" class="PoweredByVanilla">Powered by Vanilla</a>
-            {asset name="Foot"}
+            <a href="<?php echo smarty_function_vanillaurl(array(), $this);?>
+" class="PoweredByVanilla">Powered by Vanilla</a>
+            <?php echo smarty_function_asset(array('name' => 'Foot'), $this);?>
+
         </div>
     </div>
 
 </div>
-{event name="AfterBody"}
+<?php echo smarty_function_event(array('name' => 'AfterBody'), $this);?>
+
 
 </body>
 

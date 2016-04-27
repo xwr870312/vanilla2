@@ -7,7 +7,7 @@ if ($this->Data !== FALSE) {
         $CountDiscussions = $CountDiscussions + $Category->CountDiscussions;
     }
     ?>
-    <!--<div class="Box BoxCategories">
+    <div class="Box BoxCategories">
         <?php echo panelHeading(t('Categories')); ?>
         <ul class="PanelInfo PanelCategories">
             <?php
@@ -39,6 +39,6 @@ if ($this->Data !== FALSE) {
             }
             ?>
         </ul>
-    </div> -->
+    </div>
 <?php
 }

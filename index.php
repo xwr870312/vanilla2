@@ -42,4 +42,3 @@ $Dispatcher->PassProperty('EnabledApplications', $EnabledApplications);
 // Process the request.
 $Dispatcher->start();
 $Dispatcher->dispatch();
-
